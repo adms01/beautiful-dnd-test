@@ -3,7 +3,7 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import "./App.css";
 function Product({ product, index }) {
   return (
-    <Draggable draggableId={product.id} index={index} isDragDisabled={product.id === "task-1"}>
+    <Draggable draggableId={product.id} index={index} >
       {(provided, snapshot) => (
         <div className='item' ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
           <div>
